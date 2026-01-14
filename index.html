@@ -1,2424 +1,2355 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lankah Home Furniture - Premium Furniture & Home Decor in Kenya</title>
-    <meta name="description" content="Lankah Home Furniture - Premium furniture & home decor in Kenya. Transform your space with our living room, bedroom, dining collections and custom pieces in Bungoma.">
-    <meta name="keywords" content="furniture Kenya, home decor, living room furniture, bedroom sets, dining tables, custom furniture Bungoma, sofas Kenya, office furniture">
-    <meta name="author" content="Lankah Home Furniture">
+    <title>Design Interforms | Professional Interior Design & Furniture Services</title>
     
-    <!-- Open Graph tags for social media -->
-    <meta property="og:title" content="Lankah Home Furniture - Premium Furniture & Home Decor">
-    <meta property="og:description" content="Transform your space with premium furniture in Kenya. Living room, bedroom, dining collections and custom pieces.">
-    <meta property="og:image" content="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467900/Sofa1_clba94.jpg">
-    <meta property="og:url" content="https://lankahfurniture.com">
-    <meta property="og:type" content="website">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional interior design services for residential & commercial spaces. Kitchen fittings, wardrobe installations, gypsum ceilings, and custom furniture design in Kenya.">
+    <meta name="keywords" content="interior design Kenya, kitchen fittings, wardrobe installations, gypsum ceilings, furniture design, barbershop design, restaurant design, retail shop design">
+    <meta name="author" content="Design Interforms">
     
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FurnitureStore",
-      "name": "Lankah Home Furniture",
-      "description": "Premium furniture and home decor in Kenya",
-      "url": "https://lankahfurniture.com",
-      "telephone": "+254-707-962-387",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bungoma",
-        "addressCountry": "Kenya"
-      },
-      "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-16:00",
-      "priceRange": "$$",
-      "image": [
-        "https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467900/Sofa1_clba94.jpg",
-        "https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467777/Bed3_rhxb9b.jpg",
-        "https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467971/Dining_1_bbmicg.jpg"
-      ]
-    }
-    </script>
-    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
     <style>
+        /* CSS Reset & Variables */
         :root {
-            --primary: #8B4513;      /* Rich brown - wood tones */
-            --secondary: #D4AF37;    /* Gold - luxury accent */
-            --accent: #000000;       /* Black - for contrast */
-            --light: #F5F5DC;        /* Cream - light background */
-            --dark: #2C2C2C;         /* Dark text */
-            --cream: #FFFDD0;        /* Pure cream */
-            --gold: #FFD700;         /* Bright gold */
-            --transition: all 0.3s ease;
+            /* Light Theme */
+            --bg-primary: #FFFFF7;
+            --text-primary: #1A1A1A;
+            --text-secondary: #666666;
+            --card-bg: #FFFFFF;
+            --primary-color: #2A5C8B;
+            --secondary-color: #E4B363;
+            --accent-color: #4F8C6C;
+            --taupe: #C4B6A6;
+            --light-gray: #F8F8F8;
+            --border-color: rgba(0, 0, 0, 0.08);
+            
+            /* Fluid Typography */
+            --fluid-min-width: 320;
+            --fluid-max-width: 1400;
+            --fluid-screen: 100vw;
+            --fluid-bp: calc((var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) / (var(--fluid-max-width) - var(--fluid-min-width)));
+            
+            /* Spacing */
+            --section-padding: clamp(60px, 8vw, 120px) 5%;
+            --container-width: min(1400px, 90vw);
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 8px 32px rgba(0,0,0,0.08);
+            --shadow-lg: 0 16px 64px rgba(0,0,0,0.12);
+            --shadow-xl: 0 32px 128px rgba(0,0,0,0.16);
+            
+            /* Transitions */
+            --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
         body {
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: var(--dark);
-            background-image: url('https://res.cloudinary.com/dnxtuowlp/image/upload/v1760619636/Lankah_background_cupxnl.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
             overflow-x: hidden;
+            transition: background-color var(--transition-base), color var(--transition-base);
         }
-        
-        /* Top Bar */
-        .top-bar {
-            background: var(--accent);
-            color: var(--secondary);
-            padding: 8px 0;
-            font-size: 0.9rem;
-        }
-        
-        .top-bar-content {
-            display: flex;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .top-bar-content span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        /* Header */
-        .header {
-            position: fixed;
-            width: 100%;
-            background: rgba(255, 253, 208, 0.95);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            padding: 0.8rem 0;
-            top: 40px; /* Account for top bar */
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: var(--primary);
-        }
-        
-        .logo img {
-            height: 60px;
-            margin-right: 10px;
-        }
-        
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .company-name {
-            font-weight: 700;
-            font-size: 1.3rem;
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
             line-height: 1.2;
         }
-        
-        .company-tagline {
-            font-size: 0.8rem;
-            font-weight: 400;
-            color: var(--accent);
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            letter-spacing: -0.02em;
         }
-        
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 2rem;
         }
-        
-        .nav-menu li a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: var(--transition);
-            padding: 5px 0;
-            position: relative;
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
         }
-        
-        .nav-menu li a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--secondary);
-            transition: var(--transition);
+
+        p {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
-        
-        .nav-menu li a:hover:after {
+
+        .container {
+            width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Custom Cursor */
+        #custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--secondary-color);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: transform var(--transition-fast);
+        }
+
+        #cursor-follower {
+            width: 40px;
+            height: 40px;
+            background: rgba(228, 179, 99, 0.1);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform var(--transition-base), width var(--transition-fast), height var(--transition-fast);
+        }
+
+        /* Modern Header */
+        header {
+            position: fixed;
+            top: 0;
             width: 100%;
+            z-index: 900;
+            background: rgba(255, 255, 247, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all var(--transition-base);
         }
-        
-        .nav-menu li a:hover {
-            color: var(--primary);
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
-        
-        .contact-btn {
-            background: var(--primary);
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: 30px;
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-primary);
             text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-        }
-        
-        .contact-btn:hover {
-            background: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
-        }
-        
-        /* Mobile Menu */
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        
-        .mobile-menu span {
-            height: 3px;
-            width: 25px;
-            background: var(--primary);
-            margin-bottom: 4px;
-            border-radius: 3px;
-            transition: var(--transition);
-        }
-        
-        /* Hero Section with Image Background */
-        .hero {
-            position: relative;
-            height: 100vh;
+            font-family: 'Playfair Display', serif;
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            overflow: hidden;
-            padding: 0 20px;
-            background: url('https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467900/Sofa1_clba94.jpg') no-repeat center center;
-            background-size: cover;
-            margin-top: 40px; /* Account for top bar and header */
+            gap: 8px;
         }
-        
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .logo-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Modern Navigation */
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: color var(--transition-fast);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-item::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+            transform: translateX(-101%);
+            transition: transform var(--transition-base);
+        }
+
+        .nav-item:hover::before {
+            transform: translateX(0);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white !important;
+            padding: 12px 28px;
+            border-radius: 50px;
+            transition: all var(--transition-base);
+            border: none;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Overlay Menu */
+        .overlay-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            clip-path: circle(0% at 100% 0);
+            transition: clip-path var(--transition-slow);
+        }
+
+        .overlay-menu.open {
+            clip-path: circle(150% at 100% 0);
+        }
+
+        .overlay-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .overlay-nav a {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .overlay-nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Page Transitions */
+        .page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            z-index: 9999;
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            transition: clip-path var(--transition-slow);
+        }
+
+        .page-transition.active {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .page {
+            display: none;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards 0.3s;
+        }
+
+        .page.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Buttons */
+        .btn-primary, .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 50px;
+            transition: all var(--transition-base);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--card-bg);
+            border-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #25D366;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-base);
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-top: -100px;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            filter: brightness(0.7);
+        }
+
         .hero-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(139, 69, 19, 0.8), rgba(0, 0, 0, 0.6));
+            background: linear-gradient(45deg, rgba(42, 92, 139, 0.8), transparent);
+            z-index: -1;
         }
-        
+
         .hero-content {
             max-width: 800px;
-            z-index: 10;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-        }
-        
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .cta-btn {
-            padding: 0.9rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            display: inline-block;
-        }
-        
-        .cta-primary {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-        
-        .cta-primary:hover {
-            background: white;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .cta-secondary {
-            background: transparent;
-            color: var(--secondary);
-            border: 2px solid var(--secondary);
-        }
-        
-        .cta-secondary:hover {
-            background: var(--secondary);
-            color: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* Promotional Banner */
-        .promo-banner {
-            background: linear-gradient(135deg, var(--secondary), var(--gold));
-            color: var(--accent);
-            padding: 1.5rem 0;
-            text-align: center;
-            font-weight: 600;
-        }
-        
-        .promo-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .promo-content h3 {
-            font-size: 1.3rem;
-            margin: 0;
-        }
-        
-        .promo-content p {
-            margin: 0;
-        }
-        
-        /* Trust Indicators */
-        .trust-indicators {
-            padding: 3rem 2rem;
-            background: var(--cream);
-        }
-        
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .trust-item {
-            text-align: center;
-            padding: 1.5rem;
-            border-radius: 10px;
-            background: var(--cream);
-            border: 2px solid var(--secondary);
-            transition: var(--transition);
-        }
-        
-        .trust-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .trust-item i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .trust-item h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Services Banner */
-        .services-banner {
-            background: var(--accent);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-        
-        .services-banner-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .services-banner h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--secondary);
-        }
-        
-        .services-grid-banner {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .service-item {
-            background: rgba(255, 253, 208, 0.1);
-            padding: 1.5rem;
-            border-radius: 10px;
-            transition: var(--transition);
-            border: 1px solid var(--secondary);
-            cursor: pointer;
-        }
-        
-        .service-item:hover {
-            background: rgba(255, 253, 208, 0.2);
-            transform: translateY(-5px);
-            border-color: var(--gold);
-        }
-        
-        .service-item i {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-            display: block;
-        }
-        
-        .service-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Featured Products */
-        .featured-products {
-            padding: 4rem 2rem;
-            background: var(--cream);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
+            padding: 0 5%;
+            z-index: 2;
             position: relative;
         }
-        
-        .section-title:after {
-            content: '';
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.5s;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            margin-bottom: 3rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.8s;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 1.1s;
+        }
+
+        .scroll-indicator {
             position: absolute;
-            width: 80px;
-            height: 4px;
-            background-color: var(--secondary);
-            bottom: -15px;
+            bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
+            width: 30px;
+            height: 50px;
+            border: 2px solid var(--secondary-color);
+            border-radius: 15px;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 1.5s;
         }
-        
-        .section-subtitle {
+
+        .scroll-indicator::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 10px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+            animation: scrollBounce 2s infinite;
+        }
+
+        @keyframes scrollBounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* Stats Bar with Counters */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            padding: 60px 5%;
+            background: var(--card-bg);
+            border-radius: 20px;
+            margin: 80px auto;
+            max-width: 1200px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat {
             text-align: center;
-            max-width: 800px;
-            margin: 2rem auto 0;
-            color: var(--dark);
-            font-size: 1.1rem;
-            line-height: 1.6;
         }
-        
-        .featured-grid {
+
+        .counter {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            font-variant-numeric: tabular-nums;
+            margin-bottom: 10px;
+        }
+
+        .stat span {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Services Grid with 3D Effects */
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 30px;
+            margin: 60px 0;
         }
-        
-        .featured-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-            position: relative;
-            border: 2px solid var(--primary);
-        }
-        
-        .featured-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(139, 69, 19, 0.2);
-        }
-        
-        .product-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: var(--secondary);
-            color: var(--primary);
-            padding: 5px 12px;
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 40px 30px;
             border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            z-index: 2;
-        }
-        
-        .featured-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .featured-info {
-            padding: 1.5rem;
-        }
-        
-        .featured-info h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .price {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .rating {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
-        
-        .rating span {
-            color: var(--dark);
-            font-size: 0.9rem;
-        }
-        
-        .add-to-cart {
-            width: 100%;
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .add-to-cart:hover {
-            background: var(--accent);
-        }
-        
-        /* Product Category Sections */
-        .product-category {
-            padding: 5rem 2rem;
-            background-color: white;
-        }
-        
-        .category-header {
             text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .category-title {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
+            transition: all var(--transition-base);
+            border: 1px solid var(--border-color);
             position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
         }
-        
-        .category-title:after {
+
+        .service-card::before {
             content: '';
             position: absolute;
-            width: 80px;
-            height: 4px;
-            background-color: var(--secondary);
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color), var(--accent-color));
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity var(--transition-base);
         }
-        
-        .category-description {
-            max-width: 800px;
-            margin: 0 auto;
-            color: var(--dark);
-            font-size: 1.1rem;
-            line-height: 1.6;
+
+        .service-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: var(--shadow-lg);
         }
-        
-        /* Slideshow Container */
-        .slideshow-container {
-            max-width: 1000px;
+
+        .service-card:hover::before {
+            opacity: 1;
+            animation: borderRotate 3s linear infinite;
+        }
+
+        @keyframes borderRotate {
+            from { background-position: 0% 0%; }
+            to { background-position: 200% 0%; }
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            transition: transform var(--transition-base);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        /* Portfolio Gallery - Masonry Layout */
+        .portfolio-grid {
+            columns: 3;
+            column-gap: 30px;
+            margin: 60px 0;
+        }
+
+        @media (max-width: 1024px) {
+            .portfolio-grid { columns: 2; }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-grid { columns: 1; }
+        }
+
+        .project-card {
+            break-inside: avoid;
+            margin-bottom: 30px;
             position: relative;
-            margin: auto;
-            margin-top: 3rem;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            height: 500px;
+            background: var(--card-bg);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-base);
         }
-        
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            height: 100%;
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
-        
-        .slide {
-            min-width: 100%;
-            position: relative;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f9f9f9;
+
+        .project-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
         }
-        
-        .slide img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
+
+        .project-card:hover .project-img {
+            transform: scale(1.05);
         }
-        
-        .slide-caption {
+
+        .project-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(139, 69, 19, 0.8);
+            padding: 30px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
             color: white;
-            padding: 1rem;
-            text-align: center;
+            transform: translateY(100%);
+            transition: transform var(--transition-base);
         }
-        
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 24px;
-            transition: 0.3s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 10;
+
+        .project-card:hover .project-overlay {
+            transform: translateY(0);
         }
-        
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        
-        .prev:hover, .next:hover {
-            background-color: rgba(212, 175, 55, 0.8);
-        }
-        
-        .dots-container {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-        }
-        
-        .dot.active, .dot:hover {
-            background-color: var(--secondary);
-        }
-        
-        /* Testimonials Section */
-        .testimonials-section {
-            padding: 6rem 2rem;
-            background-color: var(--light);
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .testimonial-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-            border: 2px solid var(--secondary);
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(139, 69, 19, 0.2);
-        }
-        
-        .testimonial-content {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        
-        .testimonial-author {
+
+        .project-type {
+            font-size: 0.9rem;
+            opacity: 0.8;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 8px;
         }
-        
-        .author-avatar {
+
+        /* Filter Buttons */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 12px 28px;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        /* Testimonial Cards with Gradient Border */
+        .testimonial-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            transform-style: preserve-3d;
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-base);
+        }
+
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .testimonial-card:hover::before {
+            opacity: 1;
+            animation: borderRotate 3s linear infinite;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .testimonial-text::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            font-size: 4rem;
+            color: var(--secondary-color);
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .client-img {
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            overflow: hidden;
-            background-color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
-        
-        .author-info h4 {
-            color: var(--primary);
-            margin-bottom: 0.2rem;
-        }
-        
-        .author-info p {
-            color: var(--dark);
-            font-size: 0.9rem;
-        }
-        
-        /* Blog Section */
-        .blog {
-            padding: 6rem 2rem;
-            background-color: white;
-        }
-        
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .blog-card {
-            background: var(--light);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(139, 69, 19, 0.2);
-            border-color: var(--secondary);
-        }
-        
-        .blog-card img {
-            width: 100%;
-            height: 200px;
             object-fit: cover;
-            transition: var(--transition);
+            border: 3px solid var(--secondary-color);
         }
-        
-        .blog-card:hover img {
-            transform: scale(1.05);
+
+        .client-name {
+            font-weight: 600;
+            color: var(--text-primary);
         }
-        
-        .blog-card h4 {
-            color: var(--primary);
-            margin: 1rem 1rem 0.5rem;
+
+        .client-title {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
         }
-        
-        .blog-card p {
-            color: var(--dark);
-            margin: 0 1rem 1rem;
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 6rem 2rem;
-            background-color: var(--cream);
-        }
-        
-        .contact-content {
+
+        /* Contact Form with Floating Labels */
+        .contact-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
         }
-        
-        .contact-info {
+
+        .form-group {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 20px 0 10px;
+            border: none;
+            border-bottom: 2px solid var(--border-color);
+            background: transparent;
+            font-size: 1rem;
+            color: var(--text-primary);
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-label {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            transition: all var(--transition-fast);
+            pointer-events: none;
+            color: var(--text-secondary);
+        }
+
+        .form-input:focus + .form-label,
+        .form-input:valid + .form-label {
+            top: 0;
+            font-size: 0.875rem;
+            color: var(--secondary-color);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-bottom-color: var(--secondary-color);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        /* Info Items with Icon Animation */
+        .info-item {
             display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            gap: 20px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+            padding: 20px;
+            border-radius: 15px;
+            transition: all var(--transition-fast);
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
         }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+
+        .info-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-md);
         }
-        
-        .contact-icon {
+
+        .info-icon {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
             width: 50px;
             height: 50px;
-            background: var(--secondary);
-            border-radius: 50%;
+            background: rgba(228, 179, 99, 0.1);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary);
-            font-size: 1.2rem;
+            transition: all var(--transition-base);
         }
-        
-        .contact-item p {
-            color: var(--dark);
+
+        .info-item:hover .info-icon {
+            transform: scale(1.1) rotate(10deg);
+            background: rgba(228, 179, 99, 0.2);
         }
-        
-        .contact-item a {
-            color: var(--dark);
-            text-decoration: none;
-            transition: var(--transition);
+
+        /* Process Steps with Animated Numbers */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
         }
-        
-        .contact-item a:hover {
-            color: var(--primary);
+
+        .step {
+            text-align: center;
+            position: relative;
         }
-        
-        .contact-form {
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            transition: all var(--transition-base);
+        }
+
+        .step:hover .step-number {
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .step::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: -20px;
+            width: 40px;
+            height: 2px;
+            background: var(--border-color);
+        }
+
+        .step:last-child::after {
+            display: none;
+        }
+
+        /* Team Section with Flip Cards */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .team-card {
+            perspective: 1000px;
+            height: 400px;
+            border-radius: 20px;
+        }
+
+        .team-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform var(--transition-base);
+            transform-style: preserve-3d;
+        }
+
+        .team-card:hover .team-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .team-card-front, .team-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .team-card-front {
+            background: var(--card-bg);
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            border: 1px solid var(--border-color);
         }
-        
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: var(--transition);
-            background: white;
-            color: var(--dark);
-        }
-        
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
-            border-color: var(--secondary);
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
-        }
-        
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder {
-            color: #888;
-        }
-        
-        .submit-btn {
-            background: var(--primary);
+
+        .team-card-back {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
             color: white;
-            padding: 1rem;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: var(--transition);
-            margin-top: 1rem;
+            transform: rotateY(180deg);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
         }
-        
-        .submit-btn:hover {
-            background: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+
+        .member-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border: 3px solid var(--secondary-color);
         }
-        
+
+        /* Video Container with Overlay */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            margin: 60px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .video-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(42, 92, 139, 0.3), transparent);
+            pointer-events: none;
+        }
+
+        .design-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Abstract Background */
+        .abstract-bg {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .abstract-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(228, 179, 99, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(42, 92, 139, 0.1) 0%, transparent 50%);
+            z-index: -1;
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
         /* Footer */
-        .footer {
-            background: var(--accent);
-            color: white;
-            padding: 3rem 0 1rem;
+        footer {
+            background: var(--card-bg);
+            padding: 80px 5% 40px;
+            margin-top: 100px;
+            border-top: 1px solid var(--border-color);
         }
-        
+
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            gap: 60px;
+            margin-bottom: 60px;
         }
-        
-        .footer-section h3 {
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
+
+        .footer-section h4 {
+            color: var(--text-primary);
+            margin-bottom: 25px;
+            font-size: 1.2rem;
         }
-        
-        .footer-section p {
-            margin-bottom: 1rem;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
+
         .footer-section ul {
             list-style: none;
         }
-        
+
         .footer-section li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 12px;
         }
-        
+
         .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-secondary);
             text-decoration: none;
-            transition: var(--transition);
+            transition: color var(--transition-fast);
         }
-        
+
         .footer-section a:hover {
-            color: var(--secondary);
+            color: var(--secondary-color);
         }
-        
+
         .social-links {
             display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
+            gap: 20px;
+            margin-bottom: 30px;
         }
-        
-        .social-link {
-            width: 40px;
-            height: 40px;
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--bg-primary);
             border-radius: 50%;
-            background: rgba(212, 175, 55, 0.1);
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all var(--transition-base);
+            border: 1px solid var(--border-color);
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+            border-color: transparent;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--secondary);
-            transition: var(--transition);
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: all var(--transition-base);
         }
-        
-        .social-link:hover {
-            background: var(--secondary);
-            color: var(--primary);
-            transform: translateY(-3px);
+
+        .whatsapp-float:hover {
+            background: #128C7E;
+            transform: scale(1.1) rotate(15deg);
         }
-        
-        .footer-bottom {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
+
         /* Animations */
-        .animate-on-scroll {
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal-on-scroll {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.6s ease-out;
+            transition: all var(--transition-base);
         }
-        
-        .animate-on-scroll.active {
+
+        .reveal-on-scroll.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
-        /* Floating WhatsApp */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 100px;
-            right: 20px;
-            z-index: 1000;
-        }
-        
-        .whatsapp-float {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: #25D366;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            transition: var(--transition);
-        }
-        
-        .whatsapp-float:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-        
-        /* Chat Bot Styles */
-        .chat-bot {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-        
-        .chat-toggle {
-            width: 60px;
-            height: 60px;
-            background: var(--secondary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent);
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: var(--transition);
-            border: none;
-        }
-        
-        .chat-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .chat-window {
-            position: absolute;
-            bottom: 70px;
-            right: 0;
-            width: 320px;
-            height: 450px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-        
-        .chat-window.active {
-            display: flex;
-        }
-        
-        .chat-header {
-            background: var(--primary);
-            color: white;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .chat-header h3 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-        
-        .close-chat {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        
-        .chat-messages {
-            flex: 1;
-            padding: 15px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .message {
-            max-width: 80%;
-            padding: 10px 15px;
-            border-radius: 18px;
-            font-size: 14px;
-            line-height: 1.4;
-        }
-        
-        .bot-message {
-            background: #f0f0f0;
-            align-self: flex-start;
-            border-bottom-left-radius: 5px;
-        }
-        
-        .user-message {
-            background: var(--secondary);
-            color: var(--primary);
-            align-self: flex-end;
-            border-bottom-right-radius: 5px;
-        }
-        
-        .chat-input {
-            display: flex;
-            padding: 10px;
-            border-top: 1px solid #eee;
-        }
-        
-        .chat-input input {
-            flex: 1;
-            padding: 10px 15px;
-            border: 1px solid #ddd;
-            border-radius: 30px;
-            outline: none;
-        }
-        
-        .send-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            margin-left: 10px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-        
-        .send-btn:hover {
-            background: var(--accent);
-        }
-        
-        .quick-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 10px 15px;
-            border-top: 1px solid #eee;
-        }
-        
-        .quick-option {
-            background: rgba(139, 69, 19, 0.1);
-            border: 1px solid rgba(139, 69, 19, 0.2);
-            border-radius: 20px;
-            padding: 6px 12px;
-            font-size: 12px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .quick-option:hover {
-            background: var(--primary);
-            color: white;
-        }
-        
-        /* Loading Animation */
-        .loading-spinner {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(255,255,255,.3);
-            border-radius: 50%;
-            border-top-color: white;
-            animation: spin 1s ease-in-out infinite;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        /* Image Lazy Loading */
-        img[data-src] {
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        img.loaded {
-            opacity: 1;
-        }
-        
-        /* Responsive */
-        @media screen and (max-width: 768px) {
-            .top-bar-content {
-                flex-direction: column;
-                gap: 5px;
-                text-align: center;
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .contact-container {
+                grid-template-columns: 1fr;
             }
             
-            .nav-menu {
+            .portfolio-grid {
+                columns: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav ul {
                 display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .cta-group {
                 flex-direction: column;
-                padding: 1rem 0;
+                align-items: stretch;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
                 text-align: center;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                justify-content: center;
             }
             
-            .nav-menu.active {
-                display: flex;
+            .form-row {
+                grid-template-columns: 1fr;
             }
             
-            .mobile-menu {
-                display: flex;
+            .portfolio-grid {
+                columns: 1;
             }
             
-            .mobile-menu.active span:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
+            .stats-bar {
+                grid-template-columns: 1fr 1fr;
             }
             
-            .mobile-menu.active span:nth-child(2) {
-                opacity: 0;
+            .step::after {
+                display: none;
             }
             
-            .mobile-menu.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -6px);
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-bar {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-buttons {
+                justify-content: stretch;
+            }
+            
+            .filter-btn {
+                flex: 1;
+                text-align: center;
             }
             
             .hero h1 {
                 font-size: 2.5rem;
             }
             
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .section-title, .category-title {
+            .overlay-nav a {
                 font-size: 2rem;
-            }
-            
-            .services-grid-banner {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-            
-            .slideshow-container {
-                height: 300px;
-            }
-            
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .chat-window {
-                width: 280px;
-                height: 400px;
-            }
-            
-            .promo-content {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            
-            .logo img {
-                height: 50px;
             }
         }
 
-        @media screen and (max-width: 480px) {
-            .product-category {
-                padding: 4rem 1rem;
-            }
-            
-            .category-title {
-                font-size: 2.2rem;
-            }
-            
-            .slideshow-container {
-                height: 250px;
-            }
-            
-            .slide-caption {
-                padding: 0.5rem;
-                font-size: 0.9rem;
-            }
-            
-            .chat-window {
-                width: 260px;
-                height: 380px;
-            }
-            
-            .featured-products {
-                padding: 3rem 1rem;
-            }
-            
-            .logo img {
-                height: 45px;
-            }
+        /* Utility Classes */
+        .section-padding { padding: var(--section-padding); }
+        .text-center { text-align: center; }
+        .max-w-2xl { max-width: 42rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .mt-20 { margin-top: 20px; }
+        .mt-30 { margin-top: 30px; }
+        .mt-40 { margin-top: 40px; }
+        .italic { font-style: italic; }
+        .w-full { width: 100%; }
+        .grid-2-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .align-center { align-items: center; }
+        .gap-60 { gap: 60px; }
+        .gap-40 { gap: 40px; }
+        .rounded-img { border-radius: 20px; width: 100%; height: auto; }
+        .service-img { width: 100%; border-radius: 20px; height: 400px; object-fit: cover; }
+        .mission-card, .vision-card { padding: 40px; border-radius: 20px; background: var(--card-bg); border: 1px solid var(--border-color); }
+        .mission-icon, .vision-icon { font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .benefit-card { padding: 30px; border-radius: 15px; background: var(--card-bg); border: 1px solid var(--border-color); text-align: center; }
+        .benefit-icon { font-size: 2rem; color: var(--secondary-color); margin-bottom: 20px; }
+        .service-features { margin: 30px 0; }
+        .feature { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+        .feature i { color: var(--secondary-color); }
+        .clients-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 40px; }
+        .client-logo { text-align: center; font-size: 1.5rem; font-weight: 700; color: var(--secondary-color); padding: 20px; background: var(--card-bg); border-radius: 10px; }
+        .success-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .success-card { padding: 30px; border-radius: 15px; background: var(--card-bg); border: 1px solid var(--border-color); text-align: center; }
+        .success-number { font-size: 2.5rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 10px; }
+        .before-after-container { position: relative; border-radius: 15px; overflow: hidden; }
+        .before-label, .after-label { position: absolute; top: 20px; left: 20px; background: var(--secondary-color); color: white; padding: 8px 16px; border-radius: 5px; font-weight: 600; }
+        .after-label { background: var(--primary-color); }
+        .ba-img { width: 100%; height: 400px; object-fit: cover; }
+        .contact-form-container { background: var(--card-bg); padding: 40px; border-radius: 20px; border: 1px solid var(--border-color); }
+        .contact-info-container { padding: 40px; }
+        .map-container { margin-top: 40px; border-radius: 15px; overflow: hidden; }
+        .whatsapp-cta { margin-top: 40px; padding: 30px; background: var(--card-bg); border-radius: 15px; border: 1px solid var(--border-color); text-align: center; }
+        .cta-banner { padding: 60px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white; border-radius: 20px; text-align: center; margin-top: 60px; }
+        .cta-banner h2 { color: white; }
+        .success-message { display: none; padding: 20px; background: rgba(76, 175, 80, 0.1); border-radius: 10px; margin-top: 20px; border: 1px solid rgba(76, 175, 80, 0.3); }
+        .success-message i { font-size: 2rem; color: #4CAF50; }
+        .gradient-text { background: linear-gradient(45deg, var(--secondary-color), var(--primary-color)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        
+        @media (max-width: 768px) {
+            .grid-2-col { grid-template-columns: 1fr; }
+            .cta-banner { padding: 40px 20px; }
         }
     </style>
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+    <div id="cursor-follower"></div>
 
-<!-- Top Bar -->
-<div class="top-bar">
-    <div class="top-bar-content">
-        <span><i class="fas fa-phone"></i> +254 707 962 387</span>
-        <span><i class="fas fa-envelope"></i> info@lankahfurniture.com</span>
-        <span>Free Delivery within Bungoma</span>
-    </div>
-</div>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition" id="pageTransition"></div>
 
-<!-- Header -->
-<header class="header">
-    <nav class="nav-container">
-        <div class="logo">
-            <!-- Updated Lankah Logo -->
-            <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760265505/Lankah_logo_sp6xeh.jpg" alt="Lankah Home Furniture Logo">
-            <div class="logo-text">
-                <span class="company-name">LANKAH HOME FURNITURE</span>
-                <span class="company-tagline">PREMIUM FURNITURE & HOME DECOR</span>
-            </div>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Collections</a></li>
-            <li><a href="#featured">Featured</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#blog">Inspiration</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="mobile-menu"><span></span><span></span><span></span></div>
-        <a href="#contact" class="contact-btn">Get Quote</a>
-    </nav>
-</header>
-
-<!-- Hero Section with Image Background -->
-<section id="home" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1>Transform Your Space With Elegance</h1>
-        <p>Lankah Home Furniture brings you premium furniture and home decor that combines style, comfort, and exceptional craftsmanship.</p>
-        <div class="cta-buttons">
-            <a href="#featured" class="cta-btn cta-primary">Explore Collections</a>
-            <a href="#contact" class="cta-btn cta-secondary">Book Consultation</a>
-        </div>
-    </div>
-</section>
-
-<!-- Promotional Banner -->
-<section class="promo-banner">
-    <div class="promo-content">
-        <h3>🎉 Limited Time Offer!</h3>
-        <p>Get 15% off on all living room sets this month. Free delivery within Bungoma.</p>
-        <a href="#contact" class="cta-btn cta-primary">Claim Offer</a>
-    </div>
-</section>
-
-<!-- Trust Indicators -->
-<section class="trust-indicators">
-    <div class="container">
-        <div class="trust-grid">
-           
-         
-            <div class="trust-item">
-                <i class="fas fa-tools"></i>
-                <h4>Free Assembly</h4>
-                <p>Professional setup</p>
-            </div>
-            <div class="trust-item">
-                <i class="fas fa-credit-card"></i>
-                <h4>Flexible Payments</h4>
-                <p>Installment plans available</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Services Banner -->
-<section id="services" class="services-banner">
-    <div class="services-banner-content">
-        <h2>Our Furniture Collections</h2>
-        <div class="services-grid-banner">
-            <div class="service-item" data-service="living-room">
-                <i class="fas fa-couch"></i>
-                <h3>Living Room</h3>
-            </div>
-            <div class="service-item" data-service="bedroom">
-                <i class="fas fa-bed"></i>
-                <h3>Bedroom</h3>
-            </div>
-            <div class="service-item" data-service="dining">
-                <i class="fas fa-utensils"></i>
-                <h3>Dining</h3>
-            </div>
-            <div class="service-item" data-service="office">
-                <i class="fas fa-desktop"></i>
-                <h3>Office</h3>
-            </div>
-            <div class="service-item" data-service="outdoor">
-                <i class="fas fa-umbrella-beach"></i>
-                <h3>Outdoor</h3>
-            </div>
-            <div class="service-item" data-service="decor">
-                <i class="fas fa-palette"></i>
-                <h3>Decor</h3>
-            </div>
-            <div class="service-item" data-service="custom">
-                <i class="fas fa-hammer"></i>
-                <h3>Custom Pieces</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Featured Products -->
-<section id="featured" class="featured-products">
-    <div class="container">
-        <h2 class="section-title">Best Selling Products</h2>
-        <p class="section-subtitle">Discover our most popular furniture pieces loved by customers across Kenya</p>
-        <div class="featured-grid">
-            <div class="featured-card">
-                <div class="product-badge">Bestseller</div>
-                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256979/Sofa1_v8gzug.jpg" alt="Premium Leather Sofa">
-                <div class="featured-info">
-                    <h3>Premium Leather Sofa Set</h3>
-                    <div class="price">KSh 45,000</div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <span>(24 reviews)</span>
-                    </div>
-                    <button class="add-to-cart">Inquire Now</button>
-                </div>
-            </div>
-            <div class="featured-card">
-                <div class="product-badge">Popular</div>
-                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255484/bed1_oaqp3c.jpg" alt="Queen Size Bed Frame">
-                <div class="featured-info">
-                    <h3>Queen Size Bed Frame</h3>
-                    <div class="price">KSh 32,500</div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <span>(18 reviews)</span>
-                    </div>
-                    <button class="add-to-cart">Inquire Now</button>
-                </div>
-            </div>
-            <div class="featured-card">
-                <div class="product-badge">New</div>
-                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467971/Dining_1_bbmicg.jpg" alt="Extendable Dining Table">
-                <div class="featured-info">
-                    <h3>Extendable Dining Table</h3>
-                    <div class="price">KSh 28,000</div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <span>(12 reviews)</span>
-                    </div>
-                    <button class="add-to-cart">Inquire Now</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Living Room Section -->
-<section id="living-room" class="product-category">
-    <div class="container">
-        <div class="category-header">
-            <h2 class="category-title animate-on-scroll">Living Room Collection</h2>
-            <p class="category-description animate-on-scroll">Create the perfect gathering space with our premium living room furniture. From luxurious sofas to elegant coffee tables, transform your living area into a comfortable and stylish retreat.</p>
-        </div>
-        <div class="slideshow-container animate-on-scroll">
-            <div class="slides">
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256979/Sofa1_v8gzug.jpg" alt="Living Room Sofa 1">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256979/Sofa2_hr8no7.jpg" alt="Living Room Sofa 2">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256980/sofa3_ttadpu.jpg" alt="Living Room Sofa 3">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256981/sofa4_xbkqre.jpg" alt="Living Room Sofa 4">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256982/sofa5_k1bvtc.jpg" alt="Living Room Sofa 5">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256983/sofa6_xmzuv8.jpg" alt="Living Room Sofa 6">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256985/sofa7_g0afnk.jpg" alt="Living Room Sofa 7">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256986/sofa8_sdgvvw.jpg" alt="Living Room Sofa 8">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256988/sofa9_rhe84h.jpg" alt="Living Room Sofa 9">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256989/sofa10_cyvn8i.jpg" alt="Living Room Sofa 10">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256992/Sofa11_gnulfy.jpg" alt="Living Room Sofa 11">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256993/Sofa12_zfdf4i.jpg" alt="Living Room Sofa 12">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256995/sofa13_x18ho2.jpg" alt="Living Room Sofa 13">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256997/sofa14_nyacq2.jpg" alt="Living Room Sofa 14">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256998/sofa15_oyu124.jpg" alt="Living Room Sofa 15">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760257001/sofa16_ytqofi.jpg" alt="Living Room Sofa 16">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760257003/sofa17_rwmb21.jpg" alt="Living Room Sofa 17">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760257005/sofa18_xqqxvd.jpg" alt="Living Room Sofa 18">
-                    <div class="slide-caption"></div>
-                </div>
-            </div>
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
-            <div class="dots-container">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-                <span class="dot" data-slide="3"></span>
-                <span class="dot" data-slide="4"></span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Bedroom Section -->
-<section id="bedroom" class="product-category">
-    <div class="container">
-        <div class="category-header">
-            <h2 class="category-title animate-on-scroll">Bedroom Collection</h2>
-            <p class="category-description animate-on-scroll">Transform your bedroom into a sanctuary of comfort and style with our premium bedroom furniture. From elegant bed frames to functional storage solutions, create your perfect retreat.</p>
-        </div>
-        <div class="slideshow-container animate-on-scroll">
-            <div class="slides">
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255484/bed1_oaqp3c.jpg" alt="Bedroom Design 1">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255484/bed2_ezetzw.jpg" alt="Bedroom Design 2">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255485/bed3_h780xr.jpg" alt="Bedroom Design 3">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255486/bed4_jkborn.jpg" alt="Bedroom Design 4">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255487/bed5_olenab.jpg" alt="Bedroom Design 5">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255486/bed6_actiq5.jpg" alt="Bedroom Design 6">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255487/bed7_bxvckk.jpg" alt="Bedroom Design 7">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255489/bed8_n21isb.jpg" alt="Bedroom Design 8">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255490/bed9_t7bdie.jpg" alt="Bedroom Design 9">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255492/bed10_foni6b.jpg" alt="Bedroom Design 10">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255494/bed11_v1rpjt.jpg" alt="Bedroom Design 11">
-                    <div class="slide-caption"></div>
-                </div>
-            </div>
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
-            <div class="dots-container">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-                <span class="dot" data-slide="3"></span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Dining Section -->
-<section id="dining" class="product-category">
-    <div class="container">
-        <div class="category-header">
-            <h2 class="category-title animate-on-scroll">Dining Collection & Table </h2>
-            <p class="category-description animate-on-scroll">Elevate your dining experience with our exquisite dining furniture. From formal dining sets to casual breakfast nooks, create the perfect space for meals and gatherings.</p>
-        </div>
-        <div class="slideshow-container animate-on-scroll">
-            <div class="slides">
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467971/Dining_1_bbmicg.jpg" alt="Dining Room Design 1">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467972/Dining_gefkje.jpg" alt="Dining Room Design 2">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468321/Dining_2_ewppvz.jpg" alt="Dining Room Design 3">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468322/dining_5_yej2hp.jpg" alt="Dining Room Design 4">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468323/dinining_3_tqyxih.jpg" alt="Dining Room Design 5">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254595/dining1_zbtqdd.jpg" alt="Dining Room Design 6">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254595/dining2_kq6kh7.jpg" alt="Dining Room Design 7">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254595/dining3_fglnci.jpg" alt="Dining Room Design 8">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254595/dining4_zoecrz.jpg" alt="Dining Room Design 9">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254595/dining5_okhgel.jpg" alt="Dining Room Design 10">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254596/dining7_mpjbel.jpg" alt="Dining Room Design 11">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254594/dining8_au9gyz.jpg" alt="Dining Room Design 12">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254595/dining5_okhgel.jpg" alt="Dining Room Design 13">
-                    <div class="slide-caption"></div>
-                </div>
-            </div>
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
-            <div class="dots-container">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-                <span class="dot" data-slide="3"></span>
-                <span class="dot" data-slide="4"></span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- TV Stand Section -->
-<section id="tv-stand" class="product-category">
-    <div class="container">
-        <div class="category-header">
-            <h2 class="category-title animate-on-scroll">TV STAND </h2>
-            <p class="category-description animate-on-scroll">Complete your entertainment area with our stylish and functional TV stands. Designed to complement your living space while providing ample storage for media equipment.</p>
-        </div>
-        <div class="slideshow-container animate-on-scroll">
-            <div class="slides">
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260363/Tv_1_cz3rlv.jpg" alt="TV Stand 1">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260364/TV2_fzfslt.jpg" alt="TV Stand 2">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260364/TV3_yumwi5.jpg" alt="TV Stand 3">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260365/TV4_gywupk.jpg" alt="TV Stand 4">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260367/TV5_ekoozu.jpg" alt="TV Stand 5">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260370/TV6_yynq8r.jpg" alt="TV Stand 6">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260371/TV7_uhyksp.jpg" alt="TV Stand 7">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260371/TV8_ychvys.jpg" alt="TV Stand 8">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260374/TV9_eihr7x.jpg" alt="TV Stand 9">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260376/TV10_uvdtjo.jpg" alt="TV Stand 10">
-                    <div class="slide-caption"></div>
-                </div>
-            </div>
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
-            <div class="dots-container">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-                <span class="dot" data-slide="3"></span>
-                <span class="dot" data-slide="4"></span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Decor Section -->
-<section id="tv-stand" class="product-category">
-    <div class="container">
-        <div class="category-header">
-            <h2 class="category-title animate-on-scroll">Decor</h2>
-            <p class="category-description animate-on-scroll">Add the perfect finishing touches to your space with our beautiful decor items. Enhance your interior with carefully selected accessories that complement our furniture collections.</p>
-        </div>
-        <div class="slideshow-container animate-on-scroll">
-            <div class="slides">
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351800/decor1_idv0om.jpg" alt="Decor 1">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351800/decor2_b20oww.jpg" alt="Decor 2">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351801/decor3_zomgfg.jpg" alt="Decor 3">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351801/decor4_utgsgh.jpg" alt="Decor 4">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351802/decor5_rnasoy.jpg" alt="Decor 5">
-                    <div class="slide-caption"></div>
-                </div>
-            </div>
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
-            <div class="dots-container">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-                <span class="dot" data-slide="3"></span>
-                <span class="dot" data-slide="4"></span>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Drawers Section -->
-<section id="tv-stand" class="product-category">
-    <div class="container">
-        <div class="category-header">
-            <h2 class="category-title animate-on-scroll">Drawers</h2>
-            <p class="category-description animate-on-scroll">Discover our collection of stylish and functional drawers. Perfect for organizing your space while adding elegance to any room.</p>
-        </div>
-        <div class="slideshow-container animate-on-scroll">
-            <div class="slides">
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351595/cabinet1_rex5xh.jpg" alt="Drawer 1">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351595/cabinet2_ewg0bw.jpg" alt="Drawer 2">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351595/cabinet3_q0rbys.jpg" alt="Drawer 3">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351595/cabinet4_jccehj.jpg" alt="Drawer 4">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351595/cabinet6_wdprnl.jpg" alt="Drawer 5">
-                    <div class="slide-caption"></div>
-                </div>
-                <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351596/cabinet7_nemr5o.jpg" alt="Drawer 6">
-                    <div class="slide-caption"></div>
-                </div>
-            </div>
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
-            <div class="dots-container">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-                <span class="dot" data-slide="3"></span>
-                <span class="dot" data-slide="4"></span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials Section -->
-<section id="testimonials" class="testimonials-section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title animate-on-scroll">What Our Kenyan Clients Say</h2>
-            <p class="section-subtitle animate-on-scroll">Hear from satisfied customers across Kenya who have transformed their homes with Lankah furniture.</p>
-        </div>
-        
-        <div class="testimonials-grid">
-            <div class="testimonial-card animate-on-scroll">
-                <div class="testimonial-content">
-                    "Lankah Furniture transformed our living room completely! The quality of their sofas is exceptional - very durable and comfortable. As a family of five, we needed furniture that could withstand daily use, and Lankah delivered exactly that. The delivery to Eldoret was prompt and the installation team was very professional."
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">
-                        GW
-                    </div>
-                    <div class="author-info">
-                        <h4>Grace Wanjiku</h4>
-                        <p>Eldoret, Uasin Gishu County</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#home" class="logo" onclick="showPage('home')">
+                DESIGN<span>INTERFORMS</span><span class="logo-dot"></span>
+            </a>
             
-            <div class="testimonial-card animate-on-scroll">
-                <div class="testimonial-content">
-                    "I was looking for quality office furniture for my startup in Nairobi, and Lankah exceeded my expectations. Their executive desk and conference table have impressed both my team and clients. The attention to detail in the woodwork is remarkable. What I appreciate most is how they understood our budget constraints and offered flexible payment options."
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">
-                        DO
-                    </div>
-                    <div class="author-info">
-                        <h4>David Ochieng</h4>
-                        <p>Westlands, Nairobi</p>
-                    </div>
-                </div>
-            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="nav-item"><a href="#home" onclick="showPage('home')">Home</a></li>
+                    <li class="nav-item"><a href="#services" onclick="showPage('services')">Services</a></li>
+                    <li class="nav-item"><a href="#portfolio" onclick="showPage('portfolio')">Portfolio</a></li>
+                    <li class="nav-item"><a href="#about" onclick="showPage('about')">About</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-cta" onclick="showPage('contact')">Get Quote</a></li>
+                </ul>
+            </nav>
             
-            <div class="testimonial-card animate-on-scroll">
-                <div class="testimonial-content">
-                    "After searching for months for the perfect dining set, I found exactly what I needed at Lankah. The oak dining table and chairs have become the centerpiece of our home in Mombasa. Family gatherings have become more special with this beautiful furniture. The customer service was excellent - they even helped me coordinate with my interior designer."
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">
-                        FA
-                    </div>
-                    <div class="author-info">
-                        <h4>Fatima Ali</h4>
-                        <p>Nyali, Mombasa</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card animate-on-scroll">
-                <div class="testimonial-content">
-                    "As a newly married couple setting up our first home in Kisumu, we were on a tight budget. Lankah helped us furnish our entire apartment with quality pieces that didn't break the bank. The bedroom set we purchased is not only beautiful but also very functional with ample storage. We highly recommend them to young couples starting out!"
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">
-                        SM
-                    </div>
-                    <div class="author-info">
-                        <h4>Susan & Mark</h4>
-                        <p>Kisumu City</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card animate-on-scroll">
-                <div class="testimonial-content">
-                    "I run a guesthouse in Nakuru and needed durable, attractive furniture for all my rooms. Lankah provided exactly what I needed - pieces that are both beautiful and can withstand frequent use. Their bulk purchase discount made it affordable, and the delivery was on schedule. My guests often compliment the furniture, which adds to their positive experience."
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">
-                        JK
-                    </div>
-                    <div class="author-info">
-                        <h4>James Kariuki</h4>
-                        <p>Nakuru Town</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card animate-on-scroll">
-                <div class="testimonial-content">
-                    "Living in a remote area of Bungoma, I was worried about furniture delivery, but Lankah made it seamless. The custom bookshelf they created for my home office is perfect - it fits the space exactly and holds all my books securely. The craftsmen clearly understood my needs and delivered beyond expectations. Asante sana Lankah!"
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">
-                        PW
-                    </div>
-                    <div class="author-info">
-                        <h4>Peter Wanyama</h4>
-                        <p>Bungoma County</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Blog Section -->
-<section id="blog" class="blog">
-    <div class="container">
-        <h2 class="section-title animate-on-scroll">Design Inspiration</h2>
-        <p class="section-subtitle animate-on-scroll">Explore the latest trends, tips, and ideas for creating your dream home.</p>
-        <div class="blog-grid">
-            <div class="blog-card animate-on-scroll">
-                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256979/Sofa2_hr8no7.jpg" alt="Living Room Trends">
-                <h4>Top Living Room Trends for 2025</h4>
-                <p>Discover the latest design trends that are transforming living spaces this year.</p>
-            </div>
-            <div class="blog-card animate-on-scroll">
-                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468321/Dining_2_ewppvz.jpg" alt="Furniture Care">
-                <h4>How to Care for Your Wood Furniture</h4>
-                <p>Essential tips for maintaining the beauty and longevity of your wooden furniture pieces.</p>
-            </div>
-            <div class="blog-card animate-on-scroll">
-                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351800/decor2_b20oww.jpg" alt="Small Spaces">
-                <h4>Maximizing Small Spaces with Smart Furniture</h4>
-                <p>Creative solutions for making the most of compact living areas through strategic furniture choices.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2 class="section-title animate-on-scroll">Contact Us</h2>
-        <p class="section-subtitle animate-on-scroll">Ready to transform your space? Get in touch with our design team today.</p>
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <p>Bungoma, Kenya</p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📞</div>
-                    <p>Phone: <a href="tel:+254707962387">+254 707 962 387</a></p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <p>Email: <a href="mailto:info@lankahfurniture.com">info@lankahfurniture.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🕒</div>
-                    <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM</p>
-                </div>
-            </div>
-            <form class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Your Phone">
-                <select name="service" required>
-                    <option value="">Select Service</option>
-                    <option value="consultation">Design Consultation</option>
-                    <option value="living-room">Living Room Furniture</option>
-                    <option value="bedroom">Bedroom Furniture</option>
-                    <option value="dining">Dining Furniture</option>
-                    <option value="office">Office Furniture</option>
-                    <option value="custom">Custom Furniture</option>
-                    <option value="other">Other</option>
-                </select>
-                <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Lankah Home Furniture</h3>
-            <p>Transforming houses into homes with premium furniture and exceptional design services. Your trusted partner for creating beautiful, functional living spaces.</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/lankah.home.furniture" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/lankahhomefurniture?utm_source=qr&igsh=M3ozYWUyODgyMmc1" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@olakalytle?is_from_webapp=1&sender_device=pc" class="social-link" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://wa.me/254707962387" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Collections</a></li>
-                <li><a href="#featured">Featured</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#blog">Inspiration</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Collections</h3>
-            <ul>
-                <li><a href="#living-room">Living Room</a></li>
-                <li><a href="#bedroom">Bedroom</a></li>
-                <li><a href="#dining">Dining</a></li>
-                <li><a href="#tv-stand">TV STAND</a></li>
-                <li><a href="#tv-stand">Drawers</a></li>
-                <li><a href="#tv-stand">Decor</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        &copy; 2025 Lankah Home Furniture. All Rights Reserved.
-    </div>
-</footer>
-
-<!-- Floating WhatsApp -->
-<div class="floating-whatsapp">
-    <a href="https://wa.me/254707962387" target="_blank" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-        <span>Chat with us</span>
-    </a>
-</div>
-
-<!-- Chat Bot -->
-<div class="chat-bot">
-    <button class="chat-toggle">
-        <i class="fas fa-comments"></i>
-    </button>
-    <div class="chat-window">
-        <div class="chat-header">
-            <h3>Lankah Furniture Assistant</h3>
-            <button class="close-chat">
-                <i class="fas fa-times"></i>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
             </button>
         </div>
-        <div class="chat-messages">
-            <div class="message bot-message">
-                Hello! I'm your Lankah furniture assistant. How can I help you today?
-            </div>
-        </div>
-        <div class="quick-options">
-            <div class="quick-option" data-category="living-room">Living Room</div>
-            <div class="quick-option" data-category="bedroom">Bedroom</div>
-            <div class="quick-option" data-category="dining">Dining</div>
-            <div class="quick-option" data-category="tv-stand">TV Stands</div>
-            <div class="quick-option" data-category="custom">Custom Furniture</div>
-            <div class="quick-option" data-category="pricing">Pricing</div>
-        </div>
-        <div class="chat-input">
-            <input type="text" placeholder="Type your message...">
-            <button class="send-btn">
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </div>
+    </header>
+
+    <!-- Overlay Menu -->
+    <div class="overlay-menu" id="overlayMenu">
+        <nav class="overlay-nav">
+            <a href="#home" onclick="showPage('home'); toggleOverlayMenu()">Home</a>
+            <a href="#services" onclick="showPage('services'); toggleOverlayMenu()">Services</a>
+            <a href="#portfolio" onclick="showPage('portfolio'); toggleOverlayMenu()">Portfolio</a>
+            <a href="#about" onclick="showPage('about'); toggleOverlayMenu()">About</a>
+            <a href="#contact" onclick="showPage('contact'); toggleOverlayMenu()">Contact</a>
+        </nav>
     </div>
-</div>
 
-<script>
-    // Mobile Menu Toggle
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
-
-    mobileMenu.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-    });
-
-    // Scroll Animations
-    const scrollElements = document.querySelectorAll('.animate-on-scroll');
-
-    const elementInView = (el, dividend = 1) => {
-        const elementTop = el.getBoundingClientRect().top;
-        return (
-            elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
-        );
-    };
-
-    const displayScrollElement = (element) => {
-        element.classList.add('active');
-    };
-
-    const hideScrollElement = (element) => {
-        element.classList.remove('active');
-    };
-
-    const handleScrollAnimation = () => {
-        scrollElements.forEach((el) => {
-            if (elementInView(el, 1.25)) {
-                displayScrollElement(el);
-            } else {
-                hideScrollElement(el);
-            }
-        })
-    };
-
-    window.addEventListener('scroll', () => {
-        handleScrollAnimation();
-    });
-
-    // Initialize scroll animations on page load
-    window.addEventListener('load', () => {
-        handleScrollAnimation();
-    });
-
-    // Slideshow Functionality
-    function initSlideshow(slideshowContainer) {
-        const slides = slideshowContainer.querySelector('.slides');
-        const slideCount = slides.querySelectorAll('.slide').length;
-        const prevBtn = slideshowContainer.querySelector('.prev');
-        const nextBtn = slideshowContainer.querySelector('.next');
-        const dots = slideshowContainer.querySelectorAll('.dot');
+    <!-- Home Page -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="https://res.cloudinary.com/dnxtuowlp/video/upload/v1757629564/vecteezy_luxury-hotel-lobby-a-spacious-and-elegant-hotel-reception_51896071_htil1d.mp4" type="video/mp4">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80" alt="Modern interior design workspace">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Transforming Spaces<br>with <span class="gradient-text">Expert</span> Design</h1>
+                <p class="hero-subtitle">Professional interior design, fittings, and furniture solutions for residential and commercial spaces across Kenya</p>
+                <div class="cta-group">
+                    <a href="#contact" class="btn-primary" onclick="showPage('contact')">
+                        <span>Start Your Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#portfolio" class="btn-secondary" onclick="showPage('portfolio')">
+                        <span>View Our Work</span>
+                        <i class="fas fa-eye"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator"></div>
+        </div>
         
-        let currentSlide = 0;
-        
-        function goToSlide(n) {
-            currentSlide = (n + slideCount) % slideCount;
-            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
-            // Update dots
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-        
-        function nextSlide() {
-            goToSlide(currentSlide + 1);
-        }
-        
-        function prevSlide() {
-            goToSlide(currentSlide - 1);
-        }
-        
-        // Event listeners
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
-        
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => goToSlide(index));
-        });
-        
-        // Auto-advance slides
-        let slideInterval = setInterval(nextSlide, 5000);
-        
-        // Pause on hover
-        slideshowContainer.addEventListener('mouseenter', () => {
-            clearInterval(slideInterval);
-        });
-        
-        slideshowContainer.addEventListener('mouseleave', () => {
-            slideInterval = setInterval(nextSlide, 5000);
-        });
-    }
-    
-    // Initialize all slideshows
-    document.addEventListener('DOMContentLoaded', () => {
-        const slideshowContainers = document.querySelectorAll('.slideshow-container');
-        slideshowContainers.forEach(initSlideshow);
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                // Close mobile menu if open
-                navMenu.classList.remove('active');
-                mobileMenu.classList.remove('active');
+        <div class="container">
+            <!-- Introduction -->
+            <section class="section-padding">
+                <div class="abstract-bg">
+                    <div class="container">
+                        <h2 class="reveal-on-scroll">Your Complete Interior Solutions Partner</h2>
+                        <div class="text-content reveal-on-scroll">
+                            <p>Design Interforms specializes in comprehensive interior design and installation services for both residential and commercial spaces. From kitchen fittings to complete commercial renovations, we transform your vision into reality with precision and style.</p>
+                            <p>Based in Nairobi, Kenya, we serve clients across the country with professional design services, quality installations, and custom furniture solutions that combine functionality with aesthetic excellence.</p>
+                        </div>
+                    </div>
+                </div>
                 
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+                <!-- Stats Bar -->
+                <div class="stats-bar reveal-on-scroll">
+                    <div class="stat">
+                        <div class="counter" data-target="350">0</div>
+                        <span>Projects Completed</span>
+                    </div>
+                    <div class="stat">
+                        <div class="counter" data-target="95">0</div>
+                        <span>Client Satisfaction</span>
+                    </div>
+                    <div class="stat">
+                        <div class="counter" data-target="15">0</div>
+                        <span>Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <div class="counter" data-target="1200">0</div>
+                        <span>Furniture Pieces</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Services Preview -->
+            <section class="section-padding">
+                <div class="container">
+                    <h2 class="reveal-on-scroll">Our Core Services</h2>
+                    <div class="services-grid">
+                        <div class="service-card reveal-on-scroll">
+                            <div class="service-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h3>Kitchen Fittings</h3>
+                            <p>Custom kitchen cabinets, countertops, and complete kitchen remodeling</p>
+                        </div>
+                        <div class="service-card reveal-on-scroll">
+                            <div class="service-icon">
+                                <i class="fas fa-tshirt"></i>
+                            </div>
+                            <h3>Wardrobe Fittings</h3>
+                            <p>Built-in wardrobes and custom closet systems for optimal storage</p>
+                        </div>
+                        <div class="service-card reveal-on-scroll">
+                            <div class="service-icon">
+                                <i class="fas fa-border-style"></i>
+                            </div>
+                            <h3>Gypsum Ceilings</h3>
+                            <p>Modern false ceilings with lighting integration and decorative designs</p>
+                        </div>
+                        <div class="service-card reveal-on-scroll">
+                            <div class="service-icon">
+                                <i class="fas fa-chair"></i>
+                            </div>
+                            <h3>Furniture Design</h3>
+                            <p>Custom furniture design and supply for homes and businesses</p>
+                        </div>
+                    </div>
+                    <div class="text-center reveal-on-scroll">
+                        <a href="#services" class="btn-secondary" onclick="showPage('services')">
+                            <span>Explore All Services</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Featured Projects -->
+            <section class="section-padding">
+                <div class="container">
+                    <h2 class="reveal-on-scroll">Recent Projects</h2>
+                    <div class="portfolio-grid">
+                        <div class="project-card reveal-on-scroll">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Modern kitchen design with custom cabinets" class="project-img">
+                            <div class="project-overlay">
+                                <h3>Kitchen Renovation</h3>
+                                <p class="project-type">Nairobi • Residential • 2023</p>
+                            </div>
+                        </div>
+                        <div class="project-card reveal-on-scroll">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Custom wardrobe and storage solutions" class="project-img">
+                            <div class="project-overlay">
+                                <h3>Wardrobe Installation</h3>
+                                <p class="project-type">Nairobi • Residential • 2023</p>
+                            </div>
+                        </div>
+                        <div class="project-card reveal-on-scroll">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Commercial office interior design" class="project-img">
+                            <div class="project-overlay">
+                                <h3>Office Fit-Out</h3>
+                                <p class="project-type">Nairobi • Commercial • 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center reveal-on-scroll">
+                        <a href="#portfolio" class="btn-primary" onclick="showPage('portfolio')">
+                            <span>View Full Portfolio</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Testimonials Preview -->
+            <section class="section-padding">
+                <div class="container">
+                    <h2 class="reveal-on-scroll">Client Experiences</h2>
+                    <div class="testimonial-card reveal-on-scroll">
+                        <p class="testimonial-text">"Design Interforms transformed our restaurant with beautiful gypsum ceilings and custom furniture. Their attention to detail and project management was exceptional. The space now perfectly matches our brand identity and has significantly improved customer experience."</p>
+                        <div class="client-info">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="James Mwangi" class="client-img">
+                            <div>
+                                <div class="client-name">James Mwangi</div>
+                                <div class="client-title">Owner, Urban Bites Restaurant</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center reveal-on-scroll">
+                        <a href="#about" class="btn-secondary" onclick="showPage('about')">
+                            <span>More Testimonials</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Services Page -->
+    <section id="services" class="page">
+        <div class="container" style="padding: var(--section-padding);">
+            <h1 class="text-center reveal-on-scroll">Our Interior Design Services</h1>
+            <p class="text-center max-w-2xl mx-auto reveal-on-scroll">Comprehensive design and installation services for residential and commercial spaces across Kenya.</p>
+            
+            <!-- Kitchen Fittings -->
+            <section class="service-detail section-padding reveal-on-scroll">
+                <div class="grid-2-col gap-60 align-center">
+                    <div class="service-image-container">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Custom kitchen fittings and cabinetry" class="service-img">
+                    </div>
+                    <div>
+                        <h2>Kitchen Fittings & Renovation</h2>
+                        <p class="service-description">Transform your kitchen into a functional and beautiful space with our expert fitting services. We design and install custom kitchen cabinets, countertops, backsplashes, and complete kitchen systems.</p>
+                        <div class="service-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Custom kitchen cabinet design and installation</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Countertop installation (quartz, granite, marble)</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Kitchen island design and construction</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Storage optimization and pantry solutions</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Complete kitchen remodeling and renovation</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-primary mt-30" onclick="showPage('contact')">
+                            <span>Get Kitchen Design Quote</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Wardrobe Fittings -->
+            <section class="service-detail section-padding reveal-on-scroll">
+                <div class="grid-2-col gap-60 align-center">
+                    <div>
+                        <h2>Wardrobe & Closet Systems</h2>
+                        <p class="service-description">Maximize your storage space with custom-built wardrobe solutions. Our fitted wardrobes are designed to optimize every inch of your space while adding aesthetic value to your rooms.</p>
+                        <div class="service-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Custom-built wardrobes and closet systems</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Walk-in closet design and installation</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Integrated lighting and mirror systems</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Built-in drawers and storage compartments</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Dressing room design and fitting</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-primary mt-30" onclick="showPage('contact')">
+                            <span>Get Wardrobe Design Quote</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="service-image-container">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Custom wardrobe and closet systems" class="service-img">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Commercial Services -->
+            <section class="service-detail section-padding reveal-on-scroll">
+                <div class="grid-2-col gap-60 align-center">
+                    <div class="service-image-container">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Commercial office interior design" class="service-img">
+                    </div>
+                    <div>
+                        <h2>Commercial & Hospitality Design</h2>
+                        <p class="service-description">Create inviting commercial spaces that enhance customer experience and brand identity. We specialize in designing and fitting out restaurants, hotels, salons, and retail spaces.</p>
+                        <div class="service-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Restaurant and bar interior design</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Hotel and AirBNB interior design</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Salon and barbershop design</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Retail shop and showroom design</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Office interior design and fit-outs</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-primary mt-30" onclick="showPage('contact')">
+                            <span>Get Commercial Design Quote</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Additional Services -->
+            <section class="section-padding">
+                <h2 class="text-center reveal-on-scroll">Additional Specialized Services</h2>
+                <div class="services-grid">
+                    <div class="service-card reveal-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-border-style"></i>
+                        </div>
+                        <h3>Gypsum Ceilings</h3>
+                        <p>Modern false ceilings with decorative designs and integrated lighting systems</p>
+                    </div>
+                    <div class="service-card reveal-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h3>TV Consoles & Wall Units</h3>
+                        <p>Custom entertainment units and wall storage solutions</p>
+                    </div>
+                    <div class="service-card reveal-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <h3>Furniture Design & Supply</h3>
+                        <p>Custom furniture design, manufacturing, and supply for all spaces</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Portfolio Page -->
+    <section id="portfolio" class="page">
+        <div class="container" style="padding: var(--section-padding);">
+            <h1 class="text-center reveal-on-scroll">Our Portfolio</h1>
+            <p class="text-center max-w-2xl mx-auto reveal-on-scroll">Explore our collection of completed interior design projects across residential and commercial sectors in Kenya.</p>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons reveal-on-scroll">
+                <button class="filter-btn active" onclick="filterProjects('all')">All Projects</button>
+                <button class="filter-btn" onclick="filterProjects('kitchen')">Kitchen</button>
+                <button class="filter-btn" onclick="filterProjects('wardrobe')">Wardrobe</button>
+                <button class="filter-btn" onclick="filterProjects('commercial')">Commercial</button>
+                <button class="filter-btn" onclick="filterProjects('furniture')">Furniture</button>
+                <button class="filter-btn" onclick="filterProjects('ceiling')">Ceilings</button>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+            
+            <!-- Before & After -->
+            <section class="section-padding reveal-on-scroll">
+                <h2 class="text-center">Transformations</h2>
+                <div class="grid-2-col gap-40">
+                    <div class="before-after-container">
+                        <div class="before-label">Before</div>
+                        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Before kitchen renovation" class="ba-img">
+                    </div>
+                    <div class="before-after-container">
+                        <div class="after-label">After</div>
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="After kitchen renovation" class="ba-img">
+                    </div>
+                </div>
+                <p class="text-center mt-20 italic">Kitchen Transformation - Complete renovation including custom cabinets, countertops, and new layout</p>
+            </section>
+            
+            <!-- Portfolio Video -->
+            <div class="video-container reveal-on-scroll">
+                <video autoplay muted loop playsinline class="design-video">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-luxury-bedroom-interior-43924-large.mp4" type="video/mp4">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Interior design process">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="page">
+        <div class="container" style="padding: var(--section-padding);">
+            <h1 class="reveal-on-scroll">About Design Interforms</h1>
+            
+            <section class="section-padding">
+                <div class="grid-2-col reveal-on-scroll">
+                    <div>
+                        <h2>Our Story</h2>
+                        <p>Founded in 2009, Design Interforms began as a small furniture workshop in Nairobi, Kenya. Over the years, we've evolved into a comprehensive interior design and installation company serving both residential and commercial clients across the country.</p>
+                        <p>Our journey started with custom furniture manufacturing, and we've expanded our expertise to include complete interior solutions, from kitchen and wardrobe fittings to commercial space design and gypsum ceiling installations.</p>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Interior design workshop with craftsmen at work" class="rounded-img">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Mission & Vision -->
+            <section class="section-padding">
+                <div class="grid-2-col gap-60">
+                    <div class="mission-card reveal-on-scroll">
+                        <div class="mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To transform spaces through innovative design, quality craftsmanship, and exceptional service, creating functional and beautiful environments that enhance our clients' lives and businesses.</p>
+                    </div>
+                    <div class="vision-card reveal-on-scroll">
+                        <div class="vision-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To be Kenya's leading interior design and installation company, recognized for excellence in craftsmanship, innovative design solutions, and outstanding customer service.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Design Process -->
+            <section class="section-padding">
+                <h2 class="reveal-on-scroll">Our Design Process</h2>
+                <div class="process-steps">
+                    <div class="step reveal-on-scroll">
+                        <div class="step-number">01</div>
+                        <h3>Consultation</h3>
+                        <p>Understanding your needs, preferences, and budget</p>
+                    </div>
+                    <div class="step reveal-on-scroll">
+                        <div class="step-number">02</div>
+                        <h3>Design Concept</h3>
+                        <p>Creating initial design concepts and layout plans</p>
+                    </div>
+                    <div class="step reveal-on-scroll">
+                        <div class="step-number">03</div>
+                        <h3>Material Selection</h3>
+                        <p>Choosing quality materials and finishes</p>
+                    </div>
+                    <div class="step reveal-on-scroll">
+                        <div class="step-number">04</div>
+                        <h3>Installation</h3>
+                        <p>Professional installation by our skilled craftsmen</p>
+                    </div>
+                    <div class="step reveal-on-scroll">
+                        <div class="step-number">05</div>
+                        <h3>Final Inspection</h3>
+                        <p>Quality check and project handover</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Why Choose Us -->
+            <section class="section-padding">
+                <h2 class="reveal-on-scroll">Why Choose Design Interforms</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card reveal-on-scroll">
+                        <div class="benefit-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>15 Years Experience</h3>
+                        <p>Over a decade of experience in interior design and installation</p>
+                    </div>
+                    <div class="benefit-card reveal-on-scroll">
+                        <div class="benefit-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Quality Craftsmanship</h3>
+                        <p>Skilled craftsmen and quality materials ensure lasting results</p>
+                    </div>
+                    <div class="benefit-card reveal-on-scroll">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Timely Completion</h3>
+                        <p>We respect deadlines and ensure projects are completed on time</p>
+                    </div>
+                    <div class="benefit-card reveal-on-scroll">
+                        <div class="benefit-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Client-Focused</h3>
+                        <p>Personalized service and attention to client needs</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Testimonials -->
+            <section class="section-padding reveal-on-scroll">
+                <h2 class="text-center">Client Testimonials</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal-on-scroll">
+                        <p class="testimonial-text">"Design Interforms completely transformed our kitchen. The custom cabinets and countertops are not only beautiful but highly functional. Their team was professional, clean, and completed the project on time. We couldn't be happier with the results!"</p>
+                        <div class="client-info">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Sarah Wanjiru" class="client-img">
+                            <div>
+                                <div class="client-name">Sarah Wanjiru</div>
+                                <div class="client-title">Homeowner, Lavington</div>
+                                <div class="project-ref">Kitchen Renovation • Completed 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card reveal-on-scroll">
+                        <p class="testimonial-text">"Our restaurant needed a complete makeover, and Design Interforms delivered beyond expectations. The gypsum ceilings, custom furniture, and layout redesign have significantly improved our customer experience. Professional from start to finish!"</p>
+                        <div class="client-info">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Michael Omondi" class="client-img">
+                            <div>
+                                <div class="client-name">Michael Omondi</div>
+                                <div class="client-title">Owner, Urban Bites Restaurant</div>
+                                <div class="project-ref">Restaurant Design • Completed 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" class="page">
+        <div class="container" style="padding: var(--section-padding);">
+            <h1 class="text-center reveal-on-scroll">Start Your Interior Project</h1>
+            <p class="text-center max-w-2xl mx-auto reveal-on-scroll">Get in touch with our design team to discuss your project requirements and schedule a consultation.</p>
+            
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-container reveal-on-scroll">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-input" required>
+                            <label for="name" class="form-label">Full Name *</label>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" class="form-input" required>
+                                <label for="email" class="form-label">Email *</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                                <label for="phone" class="form-label">Phone</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="service-type" name="service_type" class="form-input" required>
+                                <option value=""></option>
+                                <option value="kitchen">Kitchen Fittings</option>
+                                <option value="wardrobe">Wardrobe Fittings</option>
+                                <option value="commercial">Commercial Design</option>
+                                <option value="furniture">Furniture Design</option>
+                                <option value="ceiling">Gypsum Ceilings</option>
+                                <option value="other">Other Service</option>
+                            </select>
+                            <label for="service-type" class="form-label">Service Required *</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-input" rows="5" required></textarea>
+                            <label for="message" class="form-label">Project Details *</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full">
+                            <span>Submit Project Inquiry</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                    
+                    <div id="formSuccess" class="success-message">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Thank You!</h3>
+                            <p>We'll contact you within 24 hours to discuss your project.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info-container reveal-on-scroll">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p><a href="tel:+254700000000">+254 700 000 000</a></p>
+                            <p class="hours">Mon-Fri 8AM-6PM | Sat 9AM-1PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@designinterforms.co.ke">info@designinterforms.co.ke</a></p>
+                            <p class="response">Response within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Visit Our Office</h3>
+                            <p>Industrial Area<br>Nairobi, Kenya</p>
+                            <p><a href="#" class="link">Get Directions →</a></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Map -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.808902373012!2d36.80835017475696!3d-1.293705935632593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11b37d6f1c21%3A0x8e6b14b10eb086fd!2sWestlands%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2s!4v1691234567890!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                    <div class="whatsapp-cta">
+                        <h3>Prefer WhatsApp?</h3>
+                        <p>Chat directly with our design team</p>
+                        <a href="https://wa.me/254700000000" class="btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Message on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Consultation Offer -->
+            <section class="cta-banner reveal-on-scroll">
+                <h2>Free Design Consultation</h2>
+                <p>Book a free consultation with our design team to discuss your project vision, budget, and timeline.</p>
+                <a href="#contact" class="btn-primary" onclick="document.getElementById('contactForm').scrollIntoView({behavior: 'smooth'});">
+                    <span>Book Your Free Consultation</span>
+                    <i class="fas fa-calendar-check"></i>
+                </a>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="#home" class="logo" onclick="showPage('home')">
+                        DESIGN<span>INTERFORMS</span><span class="logo-dot"></span>
+                    </a>
+                    <p>Professional interior design and installation services since 2009. Based in Nairobi, Kenya.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#services" onclick="showPage('services')">Kitchen Fittings</a></li>
+                        <li><a href="#services" onclick="showPage('services')">Wardrobe Fittings</a></li>
+                        <li><a href="#services" onclick="showPage('services')">Gypsum Ceilings</a></li>
+                        <li><a href="#services" onclick="showPage('services')">Commercial Design</a></li>
+                        <li><a href="#services" onclick="showPage('services')">Furniture Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <address>
+                        <p>Industrial Area<br>Nairobi, Kenya</p>
+                        <p>Phone: <a href="tel:+254700000000">+254 700 000 000</a></p>
+                        <p>Email: <a href="mailto:info@designinterforms.co.ke">info@designinterforms.co.ke</a></p>
+                    </address>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#services" onclick="showPage('services')">Services</a></li>
+                        <li><a href="#portfolio" onclick="showPage('portfolio')">Portfolio</a></li>
+                        <li><a href="#about" onclick="showPage('about')">About</a></li>
+                        <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Design Interforms. All rights reserved.</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/254700000000" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Portfolio Data for Design Interforms with relevant images
+        const portfolioData = [
+            { 
+                id: 1, 
+                category: 'kitchen', 
+                img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', 
+                title: 'Modern Kitchen Renovation', 
+                location: 'Nairobi', 
+                year: '2023', 
+                type: 'Kitchen Fittings' 
+            },
+            { 
+                id: 2, 
+                category: 'kitchen', 
+                img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', 
+                title: 'Luxury Kitchen Design', 
+                location: 'Karen', 
+                year: '2023', 
+                type: 'Kitchen Cabinets' 
+            },
+            { 
+                id: 3, 
+                category: 'wardrobe', 
+                img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', 
+                title: 'Walk-in Closet System', 
+                location: 'Runda', 
+                year: '2023', 
+                type: 'Wardrobe Fittings' 
+            },
+            { 
+                id: 4, 
+                category: 'wardrobe', 
+                img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', 
+                title: 'Built-in Wardrobe System', 
+                location: 'Lavington', 
+                year: '2023', 
+                type: 'Custom Storage' 
+            },
+            { 
+                id: 5, 
+                category: 'commercial', 
+                img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', 
+                title: 'Office Interior Design', 
+                location: 'Westlands', 
+                year: '2023', 
+                type: 'Commercial Fit-Out' 
+            },
+            { 
+                id: 6, 
+                category: 'commercial', 
+                img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', 
+                title: 'Restaurant Interior', 
+                location: 'Upper Hill', 
+                year: '2022', 
+                type: 'Hospitality Design' 
+            },
+            { 
+                id: 7, 
+                category: 'furniture', 
+                img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', 
+                title: 'Custom Living Room Set', 
+                location: 'Nairobi', 
+                year: '2023', 
+                type: 'Furniture Design' 
+            },
+            { 
+                id: 8, 
+                category: 'furniture', 
+                img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', 
+                title: 'Dining Room Furniture', 
+                location: 'Muthaiga', 
+                year: '2023', 
+                type: 'Custom Furniture' 
+            },
+            { 
+                id: 9, 
+                category: 'ceiling', 
+                img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', 
+                title: 'Gypsum Ceiling Design', 
+                location: 'Kilimani', 
+                year: '2023', 
+                type: 'Ceiling Installation' 
             }
-        });
-    });
+        ];
 
-    // Service banner items scroll to their respective sections
-    document.querySelectorAll('.service-item').forEach(item => {
-        item.addEventListener('click', function() {
-            const serviceId = this.getAttribute('data-service');
-            const targetSection = document.getElementById(serviceId);
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initCustomCursor();
+            initPageTransitions();
+            initScrollAnimations();
+            initCounters();
+            initPortfolio();
+            initForm();
+            initMobileMenu();
+            initSmoothScroll();
+            initVideos();
+        });
+
+        // Custom Cursor
+        function initCustomCursor() {
+            const cursor = document.getElementById('custom-cursor');
+            const follower = document.getElementById('cursor-follower');
             
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 80,
-                    behavior: 'smooth'
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                
+                setTimeout(() => {
+                    follower.style.left = e.clientX + 'px';
+                    follower.style.top = e.clientY + 'px';
+                }, 100);
+            });
+            
+            // Interactive elements
+            document.querySelectorAll('a, button, .service-card, .project-card').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(1.5)';
+                    follower.style.transform = 'scale(1.5)';
+                    follower.style.background = 'rgba(228, 179, 99, 0.2)';
                 });
+                
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    follower.style.transform = 'scale(1)';
+                    follower.style.background = 'rgba(228, 179, 99, 0.1)';
+                });
+            });
+        }
+
+        // Page Transitions
+        function initPageTransitions() {
+            const transition = document.getElementById('pageTransition');
+            
+            window.showPage = function(pageId) {
+                // Start transition
+                transition.classList.add('active');
+                
+                setTimeout(() => {
+                    // Hide all pages
+                    document.querySelectorAll('.page').forEach(page => {
+                        page.classList.remove('active');
+                    });
+                    
+                    // Show new page
+                    document.getElementById(pageId).classList.add('active');
+                    
+                    // End transition
+                    setTimeout(() => {
+                        transition.classList.remove('active');
+                    }, 300);
+                    
+                    // Update URL
+                    window.history.pushState(null, null, `#${pageId}`);
+                    
+                    // Trigger scroll animations
+                    setTimeout(initScrollAnimations, 100);
+                }, 400);
+            };
+            
+            // Handle browser back/forward
+            window.addEventListener('popstate', () => {
+                const hash = window.location.hash.substring(1) || 'home';
+                showPage(hash);
+            });
+            
+            // Initial page from URL hash
+            const hash = window.location.hash.substring(1) || 'home';
+            showPage(hash);
+        }
+
+        // Scroll Animations
+        function initScrollAnimations() {
+            const reveals = document.querySelectorAll('.reveal-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            });
+            
+            reveals.forEach(el => observer.observe(el));
+        }
+
+        // Animated Counters
+        function initCounters() {
+            const counters = document.querySelectorAll('.counter');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = +counter.getAttribute('data-target');
+                        const speed = 2000; // Duration in ms
+                        
+                        const updateCount = () => {
+                            const count = +counter.innerText;
+                            const increment = target / (speed / 16);
+                            
+                            if (count < target) {
+                                counter.innerText = Math.ceil(count + increment);
+                                setTimeout(updateCount, 16);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        
+                        updateCount();
+                        observer.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            counters.forEach(counter => observer.observe(counter));
+        }
+
+        // Portfolio Filtering
+        function initPortfolio() {
+            const portfolioGrid = document.getElementById('portfolioGrid');
+            
+            function renderPortfolio(filter = 'all') {
+                portfolioGrid.innerHTML = '';
+                
+                const filtered = filter === 'all' 
+                    ? portfolioData 
+                    : portfolioData.filter(p => p.category === filter);
+                
+                filtered.forEach(project => {
+                    const projectCard = document.createElement('div');
+                    projectCard.className = 'project-card reveal-on-scroll';
+                    projectCard.setAttribute('data-category', project.category);
+                    
+                    projectCard.innerHTML = `
+                        <img src="${project.img}" alt="${project.title}" class="project-img">
+                        <div class="project-overlay">
+                            <h3>${project.title}</h3>
+                            <p class="project-type">${project.location} • ${project.type} • ${project.year}</p>
+                        </div>
+                    `;
+                    
+                    portfolioGrid.appendChild(projectCard);
+                });
+                
+                // Re-initialize scroll animations
+                setTimeout(initScrollAnimations, 100);
             }
-        });
-    });
-
-    // Form submission handling with loading state
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const submitBtn = this.querySelector('.submit-btn');
-            const originalText = submitBtn.innerHTML;
             
-            // Show loading state
-            submitBtn.innerHTML = '<div class="loading-spinner"></div> Processing...';
-            submitBtn.disabled = true;
+            window.filterProjects = function(category) {
+                // Update filter buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                event.target.classList.add('active');
+                
+                // Render filtered portfolio
+                renderPortfolio(category);
+            };
             
-            // Simulate form submission
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                alert('Thank you! Your message has been sent successfully. We will get back to you soon.');
-                this.reset();
-            }, 2000);
-        });
-    }
+            // Initial render
+            renderPortfolio('all');
+        }
 
-    // Image lazy loading
-    function lazyLoadImages() {
-        const images = document.querySelectorAll('img[data-src]');
-        
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.add('loaded');
-                    imageObserver.unobserve(img);
+        // Contact Form
+        function initForm() {
+            const form = document.getElementById('contactForm');
+            const success = document.getElementById('formSuccess');
+            
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Simple validation
+                const name = form.name.value.trim();
+                const email = form.email.value.trim();
+                const serviceType = form.service_type.value;
+                const message = form.message.value.trim();
+                
+                if (!name || !email || !serviceType || !message) {
+                    alert('Please fill in all required fields');
+                    return;
                 }
+                
+                // In production, you would send this data to a server
+                console.log('Form submitted:', { name, email, serviceType, message });
+                
+                // Show success message
+                form.style.display = 'none';
+                success.style.display = 'flex';
+                success.style.alignItems = 'center';
+                success.style.gap = '15px';
+                
+                // Reset form
+                form.reset();
+                
+                // Send data to server (simulated)
+                setTimeout(() => {
+                    alert('Form submitted successfully! We will contact you soon.');
+                }, 500);
             });
-        });
+        }
 
-        images.forEach(img => imageObserver.observe(img));
-    }
-
-    // Add to cart functionality
-    function initAddToCart() {
-        const addToCartBtns = document.querySelectorAll('.add-to-cart');
-        
-        addToCartBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const productName = this.closest('.featured-info').querySelector('h3').textContent;
-                const message = `Hello! I'm interested in: ${productName}. Please provide more details.`;
-                window.open(`https://wa.me/254707962387?text=${encodeURIComponent(message)}`, '_blank');
+        // Mobile Menu
+        function initMobileMenu() {
+            const menuToggle = document.getElementById('mobileMenuToggle');
+            const overlayMenu = document.getElementById('overlayMenu');
+            
+            window.toggleOverlayMenu = function() {
+                overlayMenu.classList.toggle('open');
+            };
+            
+            menuToggle.addEventListener('click', toggleOverlayMenu);
+            
+            // Close menu when clicking links
+            overlayMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', toggleOverlayMenu);
             });
-        });
-    }
-
-    // Enhanced chat bot functionality
-    const chatToggle = document.querySelector('.chat-toggle');
-    const chatWindow = document.querySelector('.chat-window');
-    const closeChat = document.querySelector('.close-chat');
-    const sendBtn = document.querySelector('.send-btn');
-    const chatInput = document.querySelector('.chat-input input');
-    const chatMessages = document.querySelector('.chat-messages');
-    const quickOptions = document.querySelectorAll('.quick-option');
-
-    // Toggle chat window
-    chatToggle.addEventListener('click', () => {
-        chatWindow.classList.toggle('active');
-    });
-
-    // Close chat window
-    closeChat.addEventListener('click', () => {
-        chatWindow.classList.remove('active');
-    });
-
-    // Send message function
-    function sendMessage() {
-        const message = chatInput.value.trim();
-        if (message) {
-            // Add user message
-            addMessage(message, 'user');
-            
-            // Clear input
-            chatInput.value = '';
-            
-            // Simulate bot response
-            setTimeout(() => {
-                const botResponse = generateBotResponse(message);
-                addMessage(botResponse, 'bot');
-            }, 1000);
         }
-    }
 
-    // Send message on button click
-    sendBtn.addEventListener('click', sendMessage);
-
-    // Send message on Enter key
-    chatInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            sendMessage();
+        // Smooth Scroll for Anchor Links
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') return;
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetPage = document.getElementById(targetId);
+                    
+                    if (targetPage && targetPage.classList.contains('page')) {
+                        e.preventDefault();
+                        showPage(targetId);
+                    }
+                });
+            });
         }
-    });
 
-    // Quick option selection
-    quickOptions.forEach(option => {
-        option.addEventListener('click', () => {
-            const optionText = option.textContent;
-            addMessage(optionText, 'user');
-            
-            setTimeout(() => {
-                const botResponse = generateBotResponse(optionText);
-                addMessage(botResponse, 'bot');
-            }, 1000);
-        });
-    });
-
-    // Add message to chat
-    function addMessage(text, sender) {
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('message');
-        messageDiv.classList.add(sender === 'user' ? 'user-message' : 'bot-message');
-        messageDiv.textContent = text;
-        
-        chatMessages.appendChild(messageDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-    // Generate bot responses
-    function generateBotResponse(message) {
-        const lowerMessage = message.toLowerCase();
-        
-        // Product category responses
-        if (lowerMessage.includes('living room') || lowerMessage.includes('sofa')) {
-            return "Our living room collection features premium sofas, sectionals, and coffee tables. We have various styles from modern to traditional. Would you like to see our current promotions or schedule a viewing?";
-        } else if (lowerMessage.includes('bedroom')) {
-            return "We have beautiful bedroom sets including beds, wardrobes, and nightstands. Many options available in different wood finishes like oak, mahogany, and walnut. What size bed are you looking for?";
-        } else if (lowerMessage.includes('dining')) {
-            return "Our dining collection includes extendable tables, formal dining sets, and casual breakfast nooks. We can help you choose the perfect set for your space. What size dining area are you furnishing?";
-        } else if (lowerMessage.includes('tv stand') || lowerMessage.includes('tv')) {
-            return "We offer a variety of TV stands in different sizes and styles to complement your entertainment setup. Many include storage for media equipment. What size TV do you have?";
-        } else if (lowerMessage.includes('custom') || lowerMessage.includes('made to order')) {
-            return "We specialize in custom furniture! Our craftsmen can create pieces to your exact specifications, dimensions, and style preferences. Would you like to discuss your custom furniture needs?";
-        } else if (lowerMessage.includes('delivery')) {
-            return "We offer free delivery within Bungoma and affordable rates throughout Kenya. Delivery time is typically 3-7 days depending on your location and product availability.";
-        } else if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('pricing')) {
-            return "Our prices vary depending on the furniture type, materials, and customization options. For accurate pricing, please contact us directly at +254 707 962 387 or request a quote through our website.";
-        } else if (lowerMessage.includes('payment') || lowerMessage.includes('installment')) {
-            return "We offer flexible payment options including installment plans for larger orders. Would you like to speak with our sales team about payment options?";
-        } else if (lowerMessage.includes('warranty') || lowerMessage.includes('guarantee')) {
-            return "All our furniture comes with a 1-year warranty on craftsmanship. Premium materials have additional guarantees. We stand behind the quality of our products!";
-        } else {
-            return "Thank you for your interest in Lankah Furniture! For specific product inquiries, pricing, or to schedule a viewing, please contact us at +254 707 962 387 or visit our showroom in Bungoma.";
+        // Video Handling
+        function initVideos() {
+            document.querySelectorAll('video').forEach(video => {
+                video.play().catch(e => {
+                    // Autoplay was prevented
+                    video.controls = true;
+                });
+                
+                // Add loading state
+                video.addEventListener('loadeddata', () => {
+                    video.style.opacity = '1';
+                });
+            });
         }
-    }
 
-    // Initialize all enhancements when DOM loads
-    document.addEventListener('DOMContentLoaded', function() {
-        lazyLoadImages();
-        initAddToCart();
-        
-        // Auto-open chat after 30 seconds
-        setTimeout(() => {
-            if (!document.querySelector('.chat-window.active')) {
-                document.querySelector('.chat-toggle').click();
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '10px 0';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.padding = '20px 0';
+                header.style.backdropFilter = 'blur(10px)';
             }
-        }, 30000);
-    });
-</script>
+        });
+
+        // Add Haptic Feedback for Mobile
+        if ('vibrate' in navigator) {
+            document.querySelectorAll('button, .btn-primary, .btn-secondary').forEach(btn => {
+                btn.addEventListener('touchstart', () => {
+                    navigator.vibrate(10);
+                });
+            });
+        }
+    </script>
 </body>
 </html>
